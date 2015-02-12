@@ -1,13 +1,13 @@
 {
   "name": "raster-eyes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Yet another web page screenshot service",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:server": "watchy -w '*.js,lib' -- node server.js --cache=node-cache"
   },
-  "author": "",
+  "author": "Shawn Allen <shawn.allen@hush.com>",
   "license": "ISC",
   "dependencies": {
     "async": "^0.9.0",
