@@ -1,5 +1,5 @@
 # raster-eyes
-Raster Eyes is a Node library for taking screenshots of web pages using [PhantomJS], a headless web browser built on top of the [WebKit] rendering engine.
+Raster Eyes is a Node library for taking screenshots of web pages using [PhantomJS], a headless web browser built on top of the [WebKit] rendering engine. It can be used as a [fallback renderer] for old and/or broken browsers, or those with JavaScript disabled.
 
 ## Installation
 Install with [npm]:
@@ -65,3 +65,4 @@ google.com?viewport=800x600
 [node-cache]: https://www.npmjs.com/package/node-cache
 [node-style callbacks]: http://thenodeway.io/posts/understanding-error-first-callbacks/
 [mount point]: http://expressjs.com/4x/api.html#app.use
+[fallback renderer]: https://github.com/shawnbot/raster-eyes/wiki/Raster-Eyes-as-browser-fallback-renderer
