@@ -14,7 +14,7 @@ npm install raster-eyes
 ## Server
 ```
 Run the raster-eyes server.
-Usage: node server.js [options]
+Usage: raster-eyes [options]
 
 Examples:
   node server.js --port 8100           run on port 8001
