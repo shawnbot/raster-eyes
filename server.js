@@ -1,9 +1,23 @@
-var yargs = require('yargs'),
+#!/usr/bin/env node
+var yargs = require('yargs')
+      .usage('Run the raster-eyes server.\nUsage: $0 [options]')
+      .example('$0 --port 8100', 'run on port 8001')
+      .example('$0 --cache node-cache', 'use node-cache as the request cache')
+      .describe('host', 'Listen on this hostname (default: 127.0.0.1)')
+      .describe('port', 'Listen on this port (default: 9000)')
+      .describe('cache', 'Load this module as request cache.\nAlternatively: --cache.module=name --cache.option=option')
+      .alias('h', 'help')
+      .wrap(80),
     options = yargs.parse(process.argv),
     args = options._,
     re = require('./index'),
     extend = re.util.extend,
     fs = require('fs');
+
+if (options.help) {
+  yargs.showHelp();
+  return process.exit();
+}
 
 ['_', '$0'].forEach(function(key) {
   delete options[key];
