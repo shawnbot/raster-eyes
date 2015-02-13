@@ -19,10 +19,16 @@ if (options.config) {
 
 if (options.cache) {
   console.log('using cache:', options.cache);
-  var cache = require(options.cache);
-  options.cache = ('get' in cache)
-    ? cache
-    : new cache();
+  var isCacheObject = (typeof options.cache === "object")
+  var cacheModule = isCacheObject
+        ? require(options.cache.module)
+        : require(options.cache),
+      cacheOptions = isCacheObject
+        ? options.cache
+        : {};
+  options.cache = ('get' in cacheModule)
+    ? cacheModule
+    : new cacheModule(cacheOptions);
 }
 
 var server = re.web.server(options, function(error) {
