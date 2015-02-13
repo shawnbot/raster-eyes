@@ -2,7 +2,7 @@ var yargs = require('yargs'),
     options = yargs.parse(process.argv),
     args = options._,
     re = require('./index'),
-    extend = require('util-extend'),
+    extend = re.util.extend,
     fs = require('fs');
 
 ['_', '$0'].forEach(function(key) {
