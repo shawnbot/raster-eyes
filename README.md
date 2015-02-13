@@ -11,6 +11,23 @@ Install with [npm]:
 npm install raster-eyes
 ```
 
+## Server
+```
+Run the raster-eyes server.
+Usage: node server.js [options]
+
+Examples:
+  node server.js --port 8100           run on port 8001
+  node server.js --cache node-cache    use node-cache as the request cache
+
+
+Options:
+  --host   Listen on this hostname (default: 127.0.0.1)                         
+  --port   Listen on this port (default: 9000)                                  
+  --cache  Load this module as request cache.
+           Alternatively: --cache.module=name --cache.option=option             
+```
+
 ## API
 First, require the `raster-eyes` node module:
 
