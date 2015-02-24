@@ -6,6 +6,11 @@ var yargs = require('yargs')
       .describe('host', 'Listen on this hostname (default: 127.0.0.1)')
       .describe('port', 'Listen on this port (default: 9000)')
       .describe('cache', 'Load this module as request cache.\nAlternatively: --cache.module=name --cache.option=option')
+      .describe('static', 'serve static files from the cwd alongside /raster-eyes/')
+      .alias('static', 's')
+      .alias('cache', 'c')
+      .alias('host', 'H')
+      .alias('port', 'p')
       .alias('h', 'help')
       .wrap(80),
     options = yargs.parse(process.argv),
@@ -19,6 +24,7 @@ if (options.help) {
   return process.exit();
 }
 
+// delete the weird keys in the options object
 ['_', '$0'].forEach(function(key) {
   delete options[key];
 });
