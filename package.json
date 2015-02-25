@@ -1,6 +1,6 @@
 {
   "name": "raster-eyes",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Yet another web page screenshot service",
   "main": "index.js",
   "bin": {
